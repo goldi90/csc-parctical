@@ -23,10 +23,12 @@ echo "The sub of $number1 and $number2 is: ".$sub."<br>";
 echo "The multiply of $number1 and $number2 is: ".$mul."<br>";  
 echo "The modulas of $number1 and $number2 is: ".$modual."<br>";  
 echo "The division of $number1 and $number2 is: ".$div."<br>";  
-$num1sqr=sqrt($number1);
+$num1sqr= sqrt($number1);
 $num2sqr= sqrt($number2);
-echo "The square root of ". $number1." number is ". $num1sqr."<br>"; 
-echo "The square root of ". $number2." number is " .$num2sqr."<br>"; 
+$num1rd = round($num1sqr, 2, PHP_ROUND_HALF_UP);
+$num2rd = round($num2sqr, 2, PHP_ROUND_HALF_UP);
+echo "The square root of ". $number1." number is ". $num1rd."<br>"; 
+echo "The square root of ". $number2." number is " .$num2rd."<br>"; 
 if ($number1>=$number2) {
 	echo "the ".$number1." is bigger"; 
 }
