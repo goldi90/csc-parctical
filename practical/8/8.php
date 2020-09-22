@@ -1,15 +1,11 @@
 <?php
-// $phoneNo = $_POST['phonenumber'];
-// $FirstName = $_POST['firstname'];
-// $LastName= $_POST['lastname'];
-// $Email= $_POST['email'];
-// $Username= $_POST['username'];
-// $Password= $_POST['password'];
-$host="localhost";
-$username="root";
-$pass="";
-$db="practical";
-$conn= mysqli_connect($host,$username,$pass,$db);
+// $host="localhost";
+// $username="root";
+// $pass="";
+// $db="practical";
+// $conn= mysqli_connect($host,$username,$pass,$db);
+@include './DBconn.php';
+
 $phoneNo =  mysqli_real_escape_string($conn, $_POST['phonenumber']);
 $FirstName =  mysqli_real_escape_string($conn,$_POST['firstname']);
 $LastName=  mysqli_real_escape_string($conn, $_POST['lastname']);
@@ -17,10 +13,10 @@ $Email=  mysqli_real_escape_string($conn,$_POST['email']);
 $Username= mysqli_real_escape_string($conn,$_POST['username']);
 $Password= mysqli_real_escape_string($conn,$_POST['password']);
 
-if (mysqli_connect_error()) {
-    die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
-   }
-else {
+// if (mysqli_connect_error()) {
+//     die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
+//    }
+// else {
   if (count($errors) == 0) {
     	$Password = md5($Password_1);
 
@@ -32,5 +28,5 @@ else {
     	header('location:.././login.html');
     }
 
-}
+// }
  ?>
