@@ -1,9 +1,4 @@
 <?php
-// $host="localhost";
-// $username="root";
-// $pass="";
-// $db="practical";
-// $conn= mysqli_connect($host,$username,$pass,$db);
 @include './DBconn.php';
 
 $phoneNo =  mysqli_real_escape_string($conn, $_POST['phonenumber']);
