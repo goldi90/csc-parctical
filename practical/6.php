@@ -8,7 +8,7 @@ Enter Second Number:
 <input  type="submit" name="submit" value="Add">  
 </form>  
 <?php  
-
+error_reporting(0);
 if(isset($_POST['submit']))  {
         
     $number1 = $_POST['number1'];  
